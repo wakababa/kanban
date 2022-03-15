@@ -4,6 +4,7 @@ import Kanban from "./Kanban/Kanban";
 
 import { RiDeleteBin7Line } from 'react-icons/ri';
 import { AiFillCloseCircle } from 'react-icons/ai';
+import { BiCommentAdd } from 'react-icons/bi';
 
 
 const kanban = new Kanban()
@@ -79,12 +80,6 @@ const Settings =({data,partition,update})=>{
 
     return(
         <div key={data.id} style={{backgroundColor:"#d0cece",display:"flex",justifyContent:"space-between",padding:1,marginBottom:5}}>
-            {/*<button onClick={() => {*/}
-            {/*    partition.removeData(data.getId())*/}
-            {/*    update()*/}
-            {/*}}>*/}
-            {/* <RiDeleteBin7Line />*/}
-            {/*</button>*/}
             <select value={partition.name} onChange={(e)=> {
                 partition.removeData(data.getId())
                 kanban.moveData(e.target.value,data)
@@ -120,7 +115,10 @@ function App() {
         <div style={{display: "flex",padding:2}}>
           {kanban.store.map((partition,key) =>
               <div key={key} style={{border: "1px solid black", padding: 16,width:"100%",marginBottom:5}}>
-              <h2>{partition.name.toUpperCase()}</h2>
+             <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
+                 <h2>{partition.name.toUpperCase()}</h2>
+                  {/*<BiCommentAdd />*/}
+             </div>
                   {partition.data.map((data,key) =>
 
                   <div>
