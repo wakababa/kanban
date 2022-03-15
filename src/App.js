@@ -38,13 +38,12 @@ const Settings =({data,partition,update})=>{
 
     return(
         <div key={data.id} style={{backgroundColor:"#d0cece",display:"flex",justifyContent:"space-between",padding:1,marginBottom:5}}>
-            <button onClick={() => {
-                console.log("asd")
-                partition.removeData(data.getId())
-                update()
-            }}>
-             <RiDeleteBin7Line />
-            </button>
+            {/*<button onClick={() => {*/}
+            {/*    partition.removeData(data.getId())*/}
+            {/*    update()*/}
+            {/*}}>*/}
+            {/* <RiDeleteBin7Line />*/}
+            {/*</button>*/}
             <select value={partition.name} onChange={(e)=> {
                 partition.removeData(data.getId())
                 kanban.moveData(e.target.value,data)
@@ -60,7 +59,6 @@ const Settings =({data,partition,update})=>{
                 )
             })}
             </select>
-
         </div>
     )
 }
