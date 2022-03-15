@@ -114,9 +114,9 @@ function App() {
     <div className="App">
         <div style={{display: "flex",padding:2}}>
           {kanban.store.map((partition,key) =>
-              <div key={key} style={{border: "1px solid black", padding: 16,width:"100%",marginBottom:5}}>
+              <div key={key} style={{border: "1px solid black", padding: 5,width:"100%",marginBottom:5,height:"94vh"}}>
              <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
-                 <h2>{partition.name.toUpperCase()}</h2>
+                 <h2 style={{backgroundColor:"#e7e7e7",width:"100%"}}>{partition.name.toUpperCase()}</h2>
                   {/*<BiCommentAdd />*/}
              </div>
                   {partition.data.map((data,key) =>
