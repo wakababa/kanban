@@ -20,6 +20,12 @@ class Kanban{
     getPartition(key) {
         return this.store.find(p => p.key === key)
     }
+    moveData(toPartition,data){
+        const copyStore = this.store
+        const toIndex = this.store.findIndex(store=>store.name ===toPartition)
+        copyStore[toIndex].data =[...copyStore[toIndex].data,data]
+        this.store = copyStore
+    }
 }
 
 export default Kanban
