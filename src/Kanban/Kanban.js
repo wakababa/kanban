@@ -26,9 +26,9 @@ class Kanban{
         copyStore[toIndex].data =[...copyStore[toIndex].data,data]
         this.store = copyStore
     }
-    editData(partition,data){
+    editData(partitionName,data){
         const copyStore = this.store
-        const index = this.store.findIndex(store=>store.name ===partition)
+        const index = this.store.findIndex(store=>store.name ===partitionName)
         const dataIndex = copyStore[index].data.findIndex(d=>d.id ===data.id)
         copyStore[index].data[dataIndex] =data
         this.store = copyStore
