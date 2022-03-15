@@ -37,7 +37,7 @@ const Modal=({data,partition,onClose,update})=>{
         <div style={{display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"#dedede",position:"absolute",width:"100%",height:"100%",top:0,left:0,opacity:0.8}}>
         <div style={{justifyContent:"center",padding:10,border:"1px solid black"}}>
             <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-                <AiFillCloseCircle  size={35} onClick={onClose}/>
+                <AiFillCloseCircle  size={25} onClick={onClose}/>
             </div>
             <input  onChange={(e)=>setName(e.target.value)} type={"text"} value={editName}/>
             <div style={{display:"flex",flexDirection:"column",gap:5}}>
